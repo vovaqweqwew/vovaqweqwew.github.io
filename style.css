@@ -1,0 +1,301 @@
+body{
+    background-image: url("images/91786ab74fd16dd917a336b51a7060db.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Верхняя панель */
+header {
+    background: rgb(143, 141, 141);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Меню */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+nav ul li {
+    margin: 5px 50px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 100px;
+    transition: 0.5s;
+    font-family: 'Montserrat';
+    font-weight: 800;
+}
+
+nav ul li a:hover {
+    color: rgb(40, 124, 194);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+h2 {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    font-family: 'Montserrat';
+}
+
+/* Главная */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 450px; 
+    margin: 50px auto;
+    padding: 30px;
+    background: rgb(143, 141, 141);
+    border-radius: 70px;
+    backdrop-filter: blur(1px); 
+    box-shadow: 200px 200px 200px rgb(143, 141, 141);
+}
+.home img {
+    width: 609px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 40 px;
+    box-shadow: 0 4px 15px rgb(40, 124, 194);
+    transition: transform 0.3s ease-in-out;
+    margin-right: 5px; 
+}
+
+.home .text {
+    max-width: 450px; 
+    text-align: center;
+    margin-left: 5px; 
+}
+
+.home p {
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.7;
+    font-weight: 900;
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+@media (max-width: 768px) {
+    .home {
+        position: sticky;
+top: 10px;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .home img {
+        width: 220px;
+        height: 220px;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .home .text {
+        margin-left: 0;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .home h2 {
+        font-size: 24px;
+    }
+
+    .home p {
+        font-size: 16px;
+    }
+}
+
+
+/* Галерея */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 50px 10%;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+.gallery h2 {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #000000;
+    text-align: center;
+    grid-column: span 3;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+@media (max-width: 700px) {
+    .gallery {
+        padding: 20px 10px;
+    }
+
+    .gallery h2 {
+        font-size: 24px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*Хобби*/
+.hobbie {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    padding: 50px 10%;
+    max-width: 1000px;
+    margin: auto;
+    justify-content: center;
+}
+
+.hobbie h2 {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #000000;
+    text-align: center;
+    grid-column: span 2;
+}
+
+.hobbie img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.hobbie p {
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 1.5;
+    font-family: 'Montserrat';
+}
+
+@media (max-width: 700px) {
+    .hobbie {
+        padding: 20px 10px;
+    }
+
+    .hobbie h2 {
+        font-size: 24px;
+    }
+
+    .hobbie-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Контейнер контактов */
+.contacts {
+    text-align: center;
+    padding: 50px 10%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contacts table {
+    width: 50%;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.contacts th, .contacts td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.368);
+}
+
+.contacts th {
+    font-weight: bold;
+    font-size: 18px;
+    font-weight: 800;
+    color: #000000;
+    font-family: 'Montserrat';
+}
+
+.contacts td a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
+    transition: 0.3s;
+    font-family: 'Montserrat';
+}
+
+.contacts td a:hover {
+    color: #880000;
+}
+
+.contacts tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 600px) {
+    .contacts table {
+        font-size: 16px;
+    }
+    .contacts th, .contacts td {
+        padding: 12px;
+    }
+}
